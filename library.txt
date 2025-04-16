@@ -1,0 +1,23 @@
+# Sample library data
+library = [
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "year": 1925,
+        "genre": "Fiction",
+        "read": True
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "year": 1949,
+        "genre": "Dystopian",
+        "read": False
+    }
+]
+
+# Write the library data to 'library.txt'
+with open("library.txt", "w", encoding="utf-8") as file:
+    for book in library:
+        line = f"{book['title']} | {book['author']} | {book['year']} | {book['genre']} | {'Read' if book['read'] else 'Unread'}\n"
+        file.write(line)
